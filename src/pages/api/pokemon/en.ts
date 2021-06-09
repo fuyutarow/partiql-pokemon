@@ -7,7 +7,7 @@ const { serverRuntimeConfig } = getConfig()
 import * as partiql from "partiql-js"
 
 const pokemonJson = fs.readFileSync(
-  path.join(serverRuntimeConfig.PROJECT_ROOT, 'pokemon.json/en/pokemon.json'),
+  'public/pokemon/en/pokemon.json',
   'utf8'
 )
 
