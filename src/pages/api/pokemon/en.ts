@@ -1,15 +1,10 @@
-import fs from 'fs';
-import path from 'path'
-import getConfig from 'next/config'
 import type { NextApiRequest, NextApiResponse } from 'next'
-const { serverRuntimeConfig } = getConfig()
 
 import * as partiql from "partiql-js"
 
-const pokemonJson = fs.readFileSync(
-  'public/pokemon/en/pokemon.json',
-  'utf8'
-)
+import pokemon from '../../../../public/pokemon/en/pokemon.json';
+
+const pokemonJson = JSON.stringify(pokemon);
 
 export default async (req: NextApiRequest, res: NextApiResponse<unknown>) => {
   const query = req.query.q ?? ""
