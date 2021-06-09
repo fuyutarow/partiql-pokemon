@@ -9,7 +9,7 @@
     "prod": "next build && next start",
     "install:full": "yarn install && yarn add:pokemon.json",
     "lint": "eslint . --fix -c .eslintrc.js --ext js,jsx,ts,tsx --ignore-pattern='!.*'",
-    "add:pokemon.json": "git clone --recursive https://github.com/fuyutarow/pokemon.json",
+    "add:pokemon.json": "git submodule update --init",
     "type-check": "tsc"
   },
   "dependencies": {
